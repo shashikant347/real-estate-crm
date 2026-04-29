@@ -70,7 +70,7 @@ const todayLeads = leads.filter((lead) => {
     alert("Converted to Client");
   };
 
-  // 🔍 search + filter logic
+  
   const filteredLeads = leads.filter((lead) => {
     return (
       lead.name.toLowerCase().includes(search.toLowerCase()) &&
@@ -81,7 +81,7 @@ const todayLeads = leads.filter((lead) => {
   return (
     <div style={{ padding: "20px" }}>
       <h1>Leads</h1>
-      <h2>🔥 Today's Follow-ups</h2>
+      <h2>Today's Follow-ups</h2>
 
 {todayLeads.map((lead) => (
   <div key={lead._id}>
@@ -89,7 +89,7 @@ const todayLeads = leads.filter((lead) => {
   </div>
 ))}
 
-      {/* 🔍 SEARCH + FILTER */}
+     
       <input
         placeholder="Search by name"
         value={search}
