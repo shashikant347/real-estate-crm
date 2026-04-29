@@ -13,7 +13,7 @@ router.post("/register", async (req, res) => {
   const user = await User.create({
     name,
     email,
-    password: hash
+    password: hash,
   });
 
   res.json(user);
@@ -21,7 +21,7 @@ router.post("/register", async (req, res) => {
 
 // login
 router.post("/login", async (req, res) => {
-  const { email, password } =  req.body;
+  const { email, password } = req.body; //hello
 
   const user = await User.findOne({ email });
 
